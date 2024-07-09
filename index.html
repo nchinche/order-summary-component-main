@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1440px) {
+    
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+
+.container{
+    width: 450px;
+    height: 675px;
+    background-color: hsl(225, 100%, 98%);
+   border-radius: 20px;
+   box-shadow: 0px 0px 30px 0px  hsl(220, 1%, 54%);
+   margin: 15px 0 ;
+}
+
+.image img{
+    width: 100%;
+border-radius: 20px 20px 0 0;
+}
+
+.container h1{
+    font-size: 30px;
+    color: hsl(223, 47%, 23%);
+    margin: 40px 0 0 0;
+}
+
+
+.main-paragraph{
+    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.paragraph{
+    margin: 20px 0;
+    width: 300px;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    line-height: 23px;
+}
+
+.plan-change{
+    gap: 3px;
+    display: flex;
+    margin: 20px 0 0 0;
+}
+
+
+.plan-change .plan-button{
+    padding: 0 0 0 120px;
+}
+
+.plan{
+    line-height: 25px;
+}
+
+.plan h4{
+    color: hsl(223, 47%, 23%);
+}
+
+.plan p{
+    color: hsl(224, 23%, 55%);
+}
+
+
+.plan-button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.plan-button:hover{
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+}
+
+.proceed-plan{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+
+
+.proceed-payment{
+    width: 360px;
+    height: 45px;
+    border-radius: 10px;
+    background-color:   hsl(245, 75%, 52%);
+    border: none;
+    color: hsl(225, 100%, 98%);
+    font-size: 17px;
+    cursor: pointer;
+    margin: 6px 0;
+}
+
+
+.proceed-payment:hover{
+    background-color: hsl(228, 45%, 44%);
+}
+
+ .cancel-order{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0;
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.cancel-order:hover{
+color: hsl(223, 47%, 23%);
+}
+
+
+
+.attribution {
+ font-size: 11px;
+ text-align: center; 
+
+}
+
+
+.attribution a { 
+ color: hsl(228, 45%, 44%); 
+}
+
+}
+
+
+@media (max-width: 375px) {
+
+html,body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+    body{
+        width: 100%;
+        height: 105vh;
+        background-image: url('images/pattern-background-mobile.svg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+.container{
+    width: 300px;
+    height: 520px;
+    background-color: hsl(225, 100%, 98%);
+   border-radius: 20px;
+   box-shadow: 0px 0px 30px 0px  hsl(220, 1%, 54%);
+}
+
+
+ .image img{
+    
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+
+
+    }
+
+    
+.paragraph{
+    margin: 15px 0;
+    width: 250px;
+    font-size: 16px;
+    color: hsl(224, 23%, 55%);
+    line-height: 23px;
+}
+
+
+    .plan-change{
+        gap: 2px;
+        display: flex;
+        margin: 10px 0 0 0;
+    }
+
+    .proceed-payment{
+        width: 250px;
+        height: 40px;
+        border-radius: 10px;
+        background-color:   hsl(245, 75%, 52%);
+        border: none;
+        color: hsl(225, 100%, 98%);
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+
+    .plan-change .plan-button{
+        padding: 0 0 0 40px;
+        
+    }
+
+
+    
+.attribution {
+    font-size: 10px;
+    text-align: center; 
+    margin: 10px 0;
+   }
+   
+   
+   .attribution a { 
+    color: hsl(228, 45%, 44%); 
+   }
+    
+}
+   
+  </style>
+</head>
+<body>
+  
+<div class="container">
+
+<div class="image">
+ <img src="images/illustration-hero.svg" alt="">
+</div>
+
+<div class="main-paragraph">
+  <h1>Order Summary</h1>
+
+  <div class="paragraph">
+  <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!</p>
+</div>
+
+<div class="plan-change">
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#DFE6FB"/><path fill="#717FA6" fill-rule="nonzero" d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z"/></g></svg>
+<div class="plan">
+  <h4>Annual Plan</h4>
+  <p>$59.99/year</p>
+</div>
+  <button class="plan-button">Change</button>
+
+</div>
+
+<div class="proceed-plan">
+ <button class="proceed-payment">Proceed to Payment</button>
+  <button class="cancel-order">Cancel Order</button>
+</div>
+
+</div>
+</div>
+  <div class="attribution">
+    <h3>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
+    Coded by <a href="https://github.com/nchinche">Nchinche Pascal.</a></h3>
+  </div>
+</body>
+</html>
